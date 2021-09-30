@@ -1,12 +1,17 @@
+<a routerLink="">Home</a><br>
+
+<a routerLink="/solicitacao/cadastrar">Cadastrar</a>
 
 <ol>
+    <h3>Lista de Solicitações</h3>
     <li *ngFor="let solicitacao of solicitacoes">
+        {{ solicitacao.id}}
         {{ solicitacao.destino }}
         {{ solicitacao.dataPartida }}
         {{ solicitacao.dataRetorno }}
         {{ solicitacao.finalidade }}
-        <!-- <a routerLink="/solicitacao/editar/{{ solicitacao.destino }}">Deletar solicitacao</a> -->
+        <button routerLink="/solicitacao/update/{{ solicitacao.destino }}">Editar</button>
+        <button (click)="deletar(solicitacao.id)">Deletar</button>
     </li>
 </ol><br>
 
-<a routerLink="">Home</a>

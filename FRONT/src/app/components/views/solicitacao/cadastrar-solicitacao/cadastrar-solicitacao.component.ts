@@ -1,3 +1,5 @@
+import { FuncionarioService } from 'src/app/services/funcionario.service';
+import { Funcionario } from 'src/app/models/funcionario';
 import { Solicitacao } from 'src/app/models/solicitacao';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -17,14 +19,18 @@ export class CadastrarSolicitacaoComponent implements OnInit {
   finalidade!: string;
   funcionarioid!: number;
 
+  funcionarios!: Funcionario[];
 
-  constructor(private router: Router, private service: SolicitacaoService) { }
+
+  constructor(private router: Router, private service: SolicitacaoService, private funcionario: FuncionarioService) {
+    funcionario.list().subscribe(funcionarios => { this.funcionarios = funcionarios});
+   }
 
   ngOnInit(): void {}
 
   cadastrar(): void {
     let solicitacao: Solicitacao = {
-
+      id!: this.id,
       destino: this.destino,
       dataPartida: this.dataPartida,
       dataRetorno: this.dataRetorno,

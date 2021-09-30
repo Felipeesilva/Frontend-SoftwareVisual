@@ -1,5 +1,5 @@
 export interface Solicitacao {
-    id?: number;
+    id: number;
     destino: string;
     dataPartida: string;
     dataRetorno: string;

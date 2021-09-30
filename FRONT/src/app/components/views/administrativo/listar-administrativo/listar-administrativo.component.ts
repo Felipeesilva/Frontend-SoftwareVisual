@@ -21,4 +21,16 @@ export class ListarAdministrativoComponent implements OnInit {
     });
   }
 
+  deletar(responsavel: string):void{
+    console.log(this.deletar);
+    this.service.delete(responsavel).subscribe((responsavel) =>{
+      console.log(responsavel);
+      this.router.navigate(["administrativo/listar"]);
+      this.ngOnInit
+      this.service.list().subscribe((administrativos) => {
+        this.administrativos = administrativos;
+        console.log(this.administrativos);
+      });
+    });
+  }
 }

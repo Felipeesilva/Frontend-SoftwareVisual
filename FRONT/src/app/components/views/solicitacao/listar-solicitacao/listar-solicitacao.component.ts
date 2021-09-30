@@ -11,13 +11,26 @@ import { SolicitacaoService } from 'src/app/services/solicitacao.service';
 export class ListarSolicitacaoComponent implements OnInit {
 
   solicitacoes: Solicitacao[] = [];
-  
+  id!: number;
   constructor(private service: SolicitacaoService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.list().subscribe(solicitacoes => {
         this.solicitacoes = solicitacoes;  
         console.log(solicitacoes);
+    });
+  }
+
+  deletar(id: number):void{
+    console.log(this.deletar);
+    this.service.delete(id).subscribe((id) =>{
+      console.log(id);
+      this.router.navigate(["solicitacao/listar"]);
+      this.ngOnInit
+      this.service.list().subscribe((solicitacoes) => {
+        this.solicitacoes = solicitacoes;
+        console.log(solicitacoes);
+      });
     });
   }
 

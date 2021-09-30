@@ -1,9 +1,15 @@
+<a routerLink="">Home</a><br>
+
+<a routerLink="/administrativo/cadastrar">Cadastrar</a>
+
 <ol>
+    <h3>Lista de administrativos</h3>
     <li *ngFor="let administrativo of administrativos">
+        {{ administrativo.id}}
         {{ administrativo.responsavel }}
         {{ administrativo.matriculaAdm }}
-        <!-- <a routerLink="/administrativo/deletar/{{ administrativo.nome }}">Deletar administrativo</a> -->
+        <button routerLink="/administrativo/update/{{ administrativo.responsavel }}">Editar</button>
+        <button (click)="deletar(administrativo.responsavel)">Deletar</button>
     </li>
 </ol><br>
 
-<a routerLink="">Home</a>

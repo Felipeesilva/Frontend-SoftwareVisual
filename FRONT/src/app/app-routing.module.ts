@@ -3,19 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Funcionario
 import { CadastrarFuncionarioComponent } from './components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
-import { DeletarFuncionarioComponent } from './components/views/funcionario/deletar-funcionario/deletar-funcionario.component';
 import { ListarFuncionarioComponent } from './components/views/funcionario/listar-funcionario/listar-funcionario.component';
 import { EditarFuncionarioComponent } from './components/views/funcionario/editar-funcionario/editar-funcionario.component';
 //solicitacao
 import { CadastrarSolicitacaoComponent } from './components/views/solicitacao/cadastrar-solicitacao/cadastrar-solicitacao.component';
-import { DeletarSolicitacaoComponent } from './components/views/solicitacao/deletar-solicitacao/deletar-solicitacao.component';
+
 import { ListarSolicitacaoComponent } from './components/views/solicitacao/listar-solicitacao/listar-solicitacao.component';
 import { EditarSolicitacaoComponent } from './components/views/solicitacao/editar-solicitacao/editar-solicitacao.component';
 
 //Administrativo
 
 import { CadastrarAdministrativoComponent } from './components/views/administrativo/cadastrar-administrativo/cadastrar-administrativo.component';
-import { DeletarAdministrativoComponent } from './components/views/administrativo/deletar-administrativo/deletar-administrativo.component';
 import { ListarAdministrativoComponent } from './components/views/administrativo/listar-administrativo/listar-administrativo.component';
 import { EditarAdministrativoComponent } from './components/views/administrativo/editar-administrativo/editar-administrativo.component';
 
@@ -43,12 +41,7 @@ const routes: Routes = [
     component: CadastrarFuncionarioComponent
   },
   {
-    // Rota para deletar o Funcionario
-    path: "funcionario/deletar",
-    component: DeletarFuncionarioComponent
-  },
-  {
-    path: "funcionario/update",
+    path: "funcionario/update/:id",
     component: EditarFuncionarioComponent,
   },
   
@@ -70,12 +63,7 @@ const routes: Routes = [
     component: CadastrarSolicitacaoComponent
   },
   {
-    // Rota para deletar solicitacoes
-    path: "solicitacao/deletar",
-    component: DeletarSolicitacaoComponent
-  },
-  {
-    path: "solicitacao/update",
+    path: "solicitacao/update/:id",
     component: EditarSolicitacaoComponent
   },
 
@@ -97,12 +85,7 @@ const routes: Routes = [
     component: CadastrarAdministrativoComponent
   },
   {
-    // Rota para deletar solicitacoes
-    path: "administrativo/deletar",
-    component: DeletarAdministrativoComponent
-  },
-  {
-    path: "administrativo/update",
+    path: "administrativo/update/:id",
     component: EditarAdministrativoComponent
   },
 

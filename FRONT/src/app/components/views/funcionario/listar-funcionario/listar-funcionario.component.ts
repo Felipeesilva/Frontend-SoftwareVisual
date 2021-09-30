@@ -21,4 +21,18 @@ export class ListarFuncionarioComponent implements OnInit {
     });
   }
 
+  deletar(nome: string):void{
+    console.log(this.deletar);
+    this.service.delete(nome).subscribe((nome) =>{
+      console.log(nome);
+      this.router.navigate(["funcionario/listar"]);
+      this.ngOnInit
+      this.service.list().subscribe((funcionarios) => {
+        this.funcionarios = funcionarios;
+        console.log(this.funcionarios);
+      });
+    });
+   
+  }
+
 }

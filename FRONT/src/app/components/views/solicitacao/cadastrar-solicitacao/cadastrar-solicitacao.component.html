@@ -14,6 +14,14 @@
     <label for="finalidade">Finalidade:</label>
     <input type="text" name="finalidade" [(ngModel)]="finalidade">
 </div>
+<div id="funcionario">
+    <label for="funcionario">Funcionario:</label>
+    <select name="funcionarioid" [(ngModel)]="funcionarioid">
+        <option *ngFor="let funcionario of funcionarios" value="{{funcionario.id}}">
+            {{funcionario.nome}}
+        </option>
+    </select>
+</div>
 
 
 <button (click)="cadastrar()">Cadastrar</button><br>
