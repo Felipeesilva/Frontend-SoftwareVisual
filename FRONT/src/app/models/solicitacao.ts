@@ -4,5 +4,6 @@ export interface Solicitacao {
     dataPartida: string;
     dataRetorno: string;
     finalidade: string;
+    funcionarioid: number;
     criadoem?: string;
 }

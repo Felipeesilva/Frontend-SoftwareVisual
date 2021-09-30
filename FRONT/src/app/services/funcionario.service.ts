@@ -7,9 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FuncionarioService {
-  deletarFuncionario(nome: string) {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   private baseUrl = "http://localhost:5000/api/funcionario";
 
@@ -25,6 +23,10 @@ export class FuncionarioService {
 
   delete(nome: string): Observable<Funcionario> {
     return this.http.delete<Funcionario>(`${this.baseUrl}/delete/${nome}`);
+  }
+
+  find(id: Number): Observable<Funcionario> {
+    return this.http.get<Funcionario>(`${this.baseUrl}/getbyid/${id}`);
   }
   
   update(funcionario: Funcionario): Observable<Funcionario> {

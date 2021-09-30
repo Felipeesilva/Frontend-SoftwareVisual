@@ -20,6 +20,7 @@ export class EditarAdministrativoComponent implements OnInit {
 
   editar(): void {
       let administrativo: Administrativo = {
+          id: this.id,
           responsavel: this.responsavel,
           matriculaAdm: this.matriculaAdm
       };

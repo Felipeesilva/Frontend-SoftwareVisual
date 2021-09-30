@@ -7,10 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SolicitacaoService {
-  deletarSolicitacao(id: string) {
-    throw new Error('Method not implemented.');
-  }
-
+  
   private baseUrl = "http://localhost:5000/api/solicitacao";
 
   constructor(private http: HttpClient) { }
@@ -23,6 +20,14 @@ export class SolicitacaoService {
     return this.http.post<Solicitacao>(`${this.baseUrl}/create`, solicitacao);
   }
 
+  find(id: Number): Observable<Solicitacao> {
+    return this.http.get<Solicitacao>(`${this.baseUrl}/getbyid/${id}`);
+  }
+
+  findByFuncionarioId(funcionarioId: Number): Observable<Solicitacao[]> {
+    return this.http.get<Solicitacao[]>(`${this.baseUrl}/getbyfuncionarioid/${funcionarioId}`);
+  }
+  
   delete(id: number): Observable<Solicitacao> {
     return this.http.delete<Solicitacao>(`${this.baseUrl}/delete/${id}`);
   }

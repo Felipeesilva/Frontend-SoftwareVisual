@@ -9,6 +9,7 @@ import { Funcionario } from 'src/app/models/funcionario';
   styleUrls: ['./editar-funcionario.component.css']
 })
 export class EditarFuncionarioComponent implements OnInit {
+  
   id!: number;
   nome!: string;
   matricula!: string;
@@ -22,7 +23,8 @@ export class EditarFuncionarioComponent implements OnInit {
       let funcionario: Funcionario = {
         id: this.id,  
         nome: this.nome,
-        matricula: this.matricula
+        matricula: this.matricula,
+        criadoem: this.criadoEm
       };
       this.service.update(funcionario).subscribe((funcionario) => {
           console.log(funcionario);

@@ -10,10 +10,13 @@ import { SolicitacaoService } from 'src/app/services/solicitacao.service';
 })
 export class CadastrarSolicitacaoComponent implements OnInit {
 
+  id!: number;
   destino!: string;
   dataPartida!: string;
   dataRetorno!: string;
   finalidade!: string;
+  funcionarioid!: number;
+
 
   constructor(private router: Router, private service: SolicitacaoService) { }
 
@@ -21,10 +24,12 @@ export class CadastrarSolicitacaoComponent implements OnInit {
 
   cadastrar(): void {
     let solicitacao: Solicitacao = {
+
       destino: this.destino,
       dataPartida: this.dataPartida,
       dataRetorno: this.dataRetorno,
-      finalidade: this.finalidade
+      finalidade: this.finalidade,
+      funcionarioid: this.funcionarioid
     };
     this.service.create(solicitacao).subscribe((solicitacao) => {
       console.log(solicitacao);

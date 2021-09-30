@@ -21,6 +21,7 @@ import { DeletarSolicitacaoComponent } from './components/views/solicitacao/dele
 import { EditarSolicitacaoComponent } from './components/views/solicitacao/editar-solicitacao/editar-solicitacao.component';
 import { HomeComponent } from './components/views/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,9 +40,8 @@ import { HomeComponent } from './components/views/home/home.component';
     DeletarSolicitacaoComponent,
     EditarSolicitacaoComponent,
     // Home
-    HomeComponent
+    HomeComponent,
 
-  
   ],
   imports: [
     BrowserModule,

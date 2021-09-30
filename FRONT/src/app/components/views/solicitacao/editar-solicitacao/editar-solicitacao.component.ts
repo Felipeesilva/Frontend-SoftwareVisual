@@ -15,6 +15,7 @@ export class EditarSolicitacaoComponent implements OnInit {
   dataPartida!: string;
   dataRetorno!: string;
   finalidade!: string;
+  funcionarioid!: number;
   criadoEm!: string;
 
   constructor(private router: Router, private service: SolicitacaoService) {}
@@ -23,10 +24,12 @@ export class EditarSolicitacaoComponent implements OnInit {
 
   editar(): void {
       let solicitacao: Solicitacao = {
+          id: this.id,
           destino: this.destino,
           dataPartida: this.dataPartida,
           dataRetorno: this.dataRetorno,
-          finalidade: this.finalidade
+          finalidade: this.finalidade,
+          funcionarioid: this.funcionarioid
       };
       this.service.update(solicitacao).subscribe((solicitacao) => {
           console.log(solicitacao);

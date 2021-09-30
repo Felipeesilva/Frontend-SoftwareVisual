@@ -7,9 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AdministrativoService {
-  deletarAdministrativo(responsavel: string) {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   private baseUrl = "http://localhost:5000/api/administrativo";
 

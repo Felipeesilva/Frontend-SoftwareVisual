@@ -11,8 +11,10 @@ import { FuncionarioService } from 'src/app/services/funcionario.service';
 })
 export class CadastrarFuncionarioComponent implements OnInit {
 
+  id!: number;
   nome!: string;
   matricula!: string;
+  criadoEm!: string;
 
   constructor(private router: Router, private service: FuncionarioService) { }
 
@@ -21,7 +23,8 @@ export class CadastrarFuncionarioComponent implements OnInit {
   cadastrar(): void {
     let funcionario: Funcionario = {
       nome: this.nome,
-      matricula: this.matricula
+      matricula: this.matricula,
+      criadoem!: this.criadoEm
     };
     this.service.create(funcionario).subscribe((funcionario) => {
       console.log(funcionario);
