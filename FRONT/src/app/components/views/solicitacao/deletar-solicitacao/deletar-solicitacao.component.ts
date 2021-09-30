@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class DeletarSolicitacaoComponent implements OnInit {
   solicitacoes = ["destino", "dataPartida", "dataPartida", "dataRetorno"];
 
+  id!: number;
   destino!: string;
   dataPartida!: string;
   dataRetorno!: string;

@@ -20,8 +20,9 @@ export class EditarFuncionarioComponent implements OnInit {
 
   editar(): void {
       let funcionario: Funcionario = {
-          nome: this.nome,
-          matricula: this.matricula
+        id: this.id,  
+        nome: this.nome,
+        matricula: this.matricula
       };
       this.service.update(funcionario).subscribe((funcionario) => {
           console.log(funcionario);

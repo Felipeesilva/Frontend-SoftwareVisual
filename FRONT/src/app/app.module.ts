@@ -19,6 +19,7 @@ import { ListarSolicitacaoComponent } from './components/views/solicitacao/lista
 import { CadastrarSolicitacaoComponent } from './components/views/solicitacao/cadastrar-solicitacao/cadastrar-solicitacao.component';
 import { DeletarSolicitacaoComponent } from './components/views/solicitacao/deletar-solicitacao/deletar-solicitacao.component';
 import { EditarSolicitacaoComponent } from './components/views/solicitacao/editar-solicitacao/editar-solicitacao.component';
+import { HomeComponent } from './components/views/home/home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { EditarSolicitacaoComponent } from './components/views/solicitacao/edita
     ListarSolicitacaoComponent,
     CadastrarSolicitacaoComponent,
     DeletarSolicitacaoComponent,
-    EditarSolicitacaoComponent
+    EditarSolicitacaoComponent,
+    // Home
+    HomeComponent
 
   
   ],

@@ -1,11 +1,19 @@
-<a routerLink="/funcionario/cadastrar">Cadastrar Funcionario</a>
+<div id="id">
+    <label for="id">Id:</label>
+    <input type="text" name="id" [(ngModel)]="id">
+</div>
+<div id="nome">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" [(ngModel)]="nome">
+</div>
+<div id="matricula">
+    <label for="matricula">Matricula:</label>
+    <input type="text" name="matricula" [(ngModel)]="matricula">
+</div>
 
-<ol>
-    <li *ngFor="let funcionario of funcionario">
-        {{ funcionario.nome }}
-        {{ funcionario.matricula }}
-        <!-- <a routerLink="/funcionario/editar/{{ funcionario.nome }}">Deletar Funcionario</a> -->
-    </li>
-</ol>
+<button (click)="editar()">Editar</button>
 
-<a routerLink="/funcionario/deletar">Editar Funcionario</a>
+
+<!-- <a routerLink="/funcionario/deletar">Editar Funcionario</a>
+<a routerLink="/funcionario/cadastrar">Cadastrar Funcionario</a> -->
+

@@ -1,5 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+// Funcionario
 import { CadastrarFuncionarioComponent } from './components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import { DeletarFuncionarioComponent } from './components/views/funcionario/deletar-funcionario/deletar-funcionario.component';
 import { ListarFuncionarioComponent } from './components/views/funcionario/listar-funcionario/listar-funcionario.component';
@@ -17,6 +19,9 @@ import { DeletarAdministrativoComponent } from './components/views/administrativ
 import { ListarAdministrativoComponent } from './components/views/administrativo/listar-administrativo/listar-administrativo.component';
 import { EditarAdministrativoComponent } from './components/views/administrativo/editar-administrativo/editar-administrativo.component';
 
+// Home
+import { HomeComponent } from './components/views/home/home.component';
+
 
 
 const routes: Routes = [
@@ -25,7 +30,7 @@ const routes: Routes = [
   {
     // Home
     path: "",
-    component: ListarFuncionarioComponent
+    component: HomeComponent
   },
   {
     // Rota para Listar os Funcionarios

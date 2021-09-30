@@ -1,11 +1,14 @@
-<a routerLink="/administrativo/cadastrar">Cadastrar administrativo</a>
 
-<ol>
-    <li *ngFor="let administrativo of administrativo">
-        {{ administrativo.responsavel }}
-        {{ administrativo.matriculaAdm }}
-        <!-- <a routerLink="/administrativo/editar/{{ administrativo.nome }}">Deletar Administrativo</a> -->
-    </li>
-</ol>
+<div id="responsavel">
+    <label for="responsavel">Responsavel:</label>
+    <input type="text" name="responsavel" [(ngModel)]="responsavel">
+</div>
+<div id="matriculaAdm">
+    <label for="matriculaAdm">MatriculaAdm:</label>
+    <input type="text" name="matriculaAdm" [(ngModel)]="matriculaAdm">
+</div>
 
-<a routerLink="/administrativo/deletar">Editar administrativo</a>
+<button (click)="editar()">Editar</button>
+
+<!-- <a routerLink="/administrativo/deletar">Editar administrativo</a>
+<a routerLink="/administrativo/cadastrar">Cadastrar administrativo</a> -->
