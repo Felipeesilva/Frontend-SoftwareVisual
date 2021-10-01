@@ -1,16 +1,16 @@
+<h1 class="title" >LISTAR</h1>
+<a class="campoBox" routerLink="">Home</a>
 
-<a routerLink="">Home</a><br>
-
-<a routerLink="/funcionario/cadastrar">Cadastrar</a>
+<a class="campoBox" routerLink="/funcionario/cadastrar">Cadastrar</a>
 
 <ol>
-    <h3>Lista de Funcionarios</h3>
-    <li *ngFor="let funcionario of funcionarios">
-        {{ funcionario.id}}
-        {{ funcionario.nome }}
-        {{ funcionario.matricula }}
-        <button routerLink="/funcionario/update/{{ funcionario.nome }}">Editar</button>
-        <button (click)="deletar(funcionario.nome)">Deletar</button>
+    <h3 class="listar">Lista de Funcionarios</h3>
+    <li class="campoLi" *ngFor="let funcionario of funcionarios">
+        <h4>#{{ funcionario.id}}</h4>
+        <h4>Funcionário: {{ funcionario.nome }}</h4>
+        <h4>Matrícula Funcionário: {{ funcionario.matricula }}</h4>
+        <button class="listButton" routerLink="/funcionario/update/{{ funcionario.nome }}">Editar</button>
+        <button class="listButton" (click)="deletar(funcionario.nome)">Deletar</button>
     </li>
 </ol><br>
 

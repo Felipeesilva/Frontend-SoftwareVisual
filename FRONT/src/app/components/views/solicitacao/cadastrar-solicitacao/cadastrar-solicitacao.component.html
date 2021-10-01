@@ -1,22 +1,26 @@
+<h1 class="title" >Solicitação</h1>
+
+<a class="home" routerLink="">Home</a>
+
 <div id="destino">
-    <label for="destino">Destino:</label>
-    <input type="text" name="destino" [(ngModel)]="destino">
+    <label class="campoLabel" for="destino">Destino:</label>
+    <input class="campoBox" type="text" name="destino" [(ngModel)]="destino">
 </div>
 <div id="dataPartida">
-    <label for="dataPartida">DataPartida:</label>
-    <input type="text" name="dataPartida" [(ngModel)]="dataPartida">
+    <label class="campoLabel" for="dataPartida">DataPartida:</label>
+    <input class="campoBox" type="text" name="dataPartida" [(ngModel)]="dataPartida">
 </div>
 <div id="dataRetorno">
-    <label for="dataRetorno">DataRetorno:</label>
-    <input type="text" name="dataRetorno" [(ngModel)]="dataRetorno">
+    <label class="campoLabel" for="dataRetorno">DataRetorno:</label>
+    <input class="campoBox" type="text" name="dataRetorno" [(ngModel)]="dataRetorno">
 </div>
 <div id="finalidade">
-    <label for="finalidade">Finalidade:</label>
-    <input type="text" name="finalidade" [(ngModel)]="finalidade">
+    <label class="campoLabel" for="finalidade">Finalidade:</label>
+    <input class="campoBox" type="text" name="finalidade" [(ngModel)]="finalidade">
 </div>
 <div id="funcionario">
-    <label for="funcionario">Funcionario:</label>
-    <select name="funcionarioid" [(ngModel)]="funcionarioid">
+    <label class="campoLabel" for="funcionario">Funcionario:</label>
+    <select class="campoBox" name="funcionarioid" [(ngModel)]="funcionarioid">
         <option *ngFor="let funcionario of funcionarios" value="{{funcionario.id}}">
             {{funcionario.nome}}
         </option>
@@ -24,6 +28,4 @@
 </div>
 
 
-<button (click)="cadastrar()">Cadastrar</button><br>
-
-<a routerLink="">Home</a>
+<button class="cadastrar" (click)="cadastrar()">Cadastrar</button><br>
