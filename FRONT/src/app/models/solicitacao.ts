@@ -1,3 +1,5 @@
+import { Funcionario } from "./funcionario";
+
 export interface Solicitacao {
     id: number;
     destino: string;
@@ -5,5 +7,6 @@ export interface Solicitacao {
     dataRetorno: string;
     finalidade: string;
     funcionarioid: number;
+    funcionario?: Funcionario;
     criadoem?: string;
 }

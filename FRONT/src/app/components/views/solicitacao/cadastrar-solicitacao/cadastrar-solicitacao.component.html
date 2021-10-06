@@ -20,7 +20,7 @@
 </div>
 <div id="funcionario">
     <label class="campoLabel" for="funcionario">Funcionario:</label>
-    <select class="campoBox" name="funcionarioid" [(ngModel)]="funcionarioid">
+    <select class="campoBox" name="funcionario" [(ngModel)]="funcionarioid">
         <option *ngFor="let funcionario of funcionarios" value="{{funcionario.id}}">
             {{funcionario.nome}}
         </option>
